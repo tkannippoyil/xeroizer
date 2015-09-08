@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = ["Wayne Robinson"]
   s.date = "2013-07-04"
   s.description = "Ruby library for the Xero accounting system API."
-  s.email = "wayne.robinson@gmail.com"
+  s.email = "tkannippoyil@suyati.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -355,55 +355,30 @@ Gem::Specification.new do |s|
     "test/unit/report_test.rb",
     "xeroizer.gemspec"
   ]
-  s.homepage = "http://github.com/waynerobinson/xeroizer"
+  s.homepage = "http://github.com/tkannippoyil/xeroizer"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.25"
   s.summary = "Xero library"
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
+  s.specification_version = 3 if s.respond_to? :specification_version
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_runtime_dependency(%q<oauth>, ["= 0.4.5"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 0"])
-      s.add_runtime_dependency(%q<tzinfo>, [">= 0"])
-      s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_runtime_dependency(%q<i18n>, [">= 0"])
-      s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_runtime_dependency(%q<oauth>, [">= 0.3.6"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 0"])
-      s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
-      s.add_development_dependency(%q<mocha>, [">= 0"])
-      s.add_development_dependency(%q<shoulda>, [">= 0"])
-    else
-      s.add_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_dependency(%q<oauth>, ["= 0.4.5"])
-      s.add_dependency(%q<activesupport>, [">= 0"])
-      s.add_dependency(%q<tzinfo>, [">= 0"])
-      s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<i18n>, [">= 0"])
-      s.add_dependency(%q<builder>, [">= 2.1.2"])
-      s.add_dependency(%q<oauth>, [">= 0.3.6"])
-      s.add_dependency(%q<activesupport>, [">= 0"])
-      s.add_dependency(%q<nokogiri>, [">= 0"])
-      s.add_dependency(%q<mocha>, [">= 0"])
-      s.add_dependency(%q<shoulda>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<builder>, [">= 2.1.2"])
-    s.add_dependency(%q<oauth>, ["= 0.4.5"])
-    s.add_dependency(%q<activesupport>, [">= 0"])
-    s.add_dependency(%q<tzinfo>, [">= 0"])
-    s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<i18n>, [">= 0"])
-    s.add_dependency(%q<builder>, [">= 2.1.2"])
-    s.add_dependency(%q<oauth>, [">= 0.3.6"])
-    s.add_dependency(%q<activesupport>, [">= 0"])
-    s.add_dependency(%q<nokogiri>, [">= 0"])
-    s.add_dependency(%q<mocha>, [">= 0"])
-    s.add_dependency(%q<shoulda>, [">= 0"])
-  end
+  s.add_development_dependency "bundler", "~> 1.5"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "mocha"
+  s.add_development_dependency "shoulda"
+  s.add_development_dependency "test-unit"
+  s.add_development_dependency "rest-client"
+  s.add_development_dependency "turn"
+  s.add_development_dependency "ansi"
+  s.add_development_dependency "redcarpet"
+  s.add_development_dependency "yard"
+  s.add_dependency "builder", ">= 2.1.2"
+  s.add_dependency "oauth", ">= 0.4.5"
+  s.add_dependency "activesupport"
+  s.add_dependency "nokogiri"
+  s.add_dependency "tzinfo"
+  s.add_dependency "i18n"
+
 end
 
