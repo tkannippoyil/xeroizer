@@ -24,6 +24,7 @@ module Xeroizer
     record :PayrollCalendar
     record :Timesheet
     record :NumberOfUnit
+    record :EarningsRate
 
     def initialize(application)
       @application = application
