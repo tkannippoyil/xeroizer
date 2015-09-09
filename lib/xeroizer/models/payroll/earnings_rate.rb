@@ -56,6 +56,11 @@ module Xeroizer
         def rate_per_unit?
           self.rate_type == 'RATEPERUNIT'
         end
+
+        def copy
+          self.clone
+        end
+
       end
     end 
   end
