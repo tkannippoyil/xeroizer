@@ -75,7 +75,11 @@ module Xeroizer
         end
         
         def new_record?
-          id.nil?
+          begin
+            id.nil?
+          rescue
+            false
+          end
         end
         
         # Check to see if the complete record is downloaded.
