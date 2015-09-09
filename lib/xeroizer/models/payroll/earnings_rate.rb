@@ -57,13 +57,6 @@ module Xeroizer
           self.rate_type == 'RATEPERUNIT'
         end
 
-        def copy
-          fake_parent = Class.new do
-            attr_accessor :application
-          end.new
-          EarningsRate.new fake_parent
-        end
-
       end
     end 
   end
