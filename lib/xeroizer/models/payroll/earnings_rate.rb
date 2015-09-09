@@ -61,7 +61,7 @@ module Xeroizer
           fake_parent = Class.new do
             attr_accessor :application
           end.new
-          self.new fake_parent
+          EarningsRate.new fake_parent
         end
 
       end
