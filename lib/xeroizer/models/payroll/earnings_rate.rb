@@ -58,7 +58,10 @@ module Xeroizer
         end
 
         def copy
-          self.clone
+          fake_parent = Class.new do
+            attr_accessor :application
+          end.new
+          self.new fake_parent
         end
 
       end
