@@ -3,8 +3,8 @@ module Xeroizer
     module Payroll
     
       class PayItemsModel < PayrollBaseModel
-        # set_permissions :read, :write, :update
-        set_permissions :read
+        set_permissions :read, :write, :update
+        # set_permissions :read
       end
 
       class PayItems < PayrollBase
