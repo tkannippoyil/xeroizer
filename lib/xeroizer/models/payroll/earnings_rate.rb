@@ -3,7 +3,8 @@ module Xeroizer
     module Payroll
     
       class EarningsRateModel < PayrollBaseModel
-      end
+         set_permissions :read, :write, :update
+     end
       
       class EarningsRate < PayrollBase
         
