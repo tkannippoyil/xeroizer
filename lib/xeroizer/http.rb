@@ -54,7 +54,7 @@ module Xeroizer
       def http_request(client, method, url, body, params = {})
         # headers = {'Accept-Encoding' => 'gzip, deflate'}
 
-        puts body
+        # puts body
 
         headers = { 'charset' => 'utf-8' }
 
