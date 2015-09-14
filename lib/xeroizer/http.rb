@@ -143,6 +143,7 @@ module Xeroizer
           when "token_expired"        then raise OAuth::TokenExpired.new(description)
           when "token_rejected"       then raise OAuth::TokenInvalid.new(description)
           when "rate limit exceeded"  then raise OAuth::RateLimitExceeded.new(description)
+          when nil then raise OAuth::UnknownError.new("%s:%s" %[error_details, description])
           else raise OAuth::UnknownError.new(error_details["oauth_problem"].first + ':' + description)
         end
       end
